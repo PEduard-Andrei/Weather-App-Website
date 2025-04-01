@@ -1,0 +1,173 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.weather-card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: rgb(207, 227, 255);
+}
+
+.weather-card * {
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+#autocomplete-container {
+  position: relative;
+  width: 60%;
+  margin-right: 20px;
+}
+
+#autocomplete-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #acd9f7;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#autocomplete-results {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #acd9f7;
+  border-radius: 5px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.result-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  background-color: #e0f1fd;
+}
+
+#loadingSpinner {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #acd9f7;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#weatherData {
+  display: none;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.weather-details div {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-details h3 {
+  margin-top: 20px;
+}
+
+.search-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #2980b9;
+}
+
+#favoritesContainer button {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#favoritesContainer button:hover {
+  background-color: #2980b9;
+}
+
+#forecastButtons button {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#forecastButtons button:hover {
+  background-color: #2980b9;
+}
+.weather-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.clickable-text {
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+  font-size: 16px;
+}
+
+.clickable-text:hover {
+  font-size: 20px;
+}
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 250px;
+  height: auto;
+}

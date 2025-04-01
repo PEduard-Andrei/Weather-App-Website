@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paunita Eduard-Andrei 324AB Weather App</title>
+    <link rel="stylesheet" href="styles/global.css" />
+  </head>
+  <body>
+    <img id="logo" src="assets/images/logo.png" alt="Logo" />
+    <div class="weather-card">
+      <div class="search-container">
+        <div id="autocomplete-container">
+          <input
+            type="text"
+            id="autocomplete-input"
+            placeholder="Search weather for city"
+          />
+          <div id="autocomplete-results"></div>
+        </div>
+        <button id="searchButton" onclick="getWeather()">Search</button>
+      </div>
+      <div id="loadingSpinner"></div>
+      <div id="weatherData">
+        <h2 id="cityName"></h2>
+        <p id="temperature"><span class="weather-icon">&#9728;</span></p>
+        <p id="skyCondition"><span class="weather-icon">&#9729;</span></p>
+        <p id="humidity"><span class="weather-icon">&#9730;</span></p>
+        <div id="windInfo"><span class="weather-icon">&#9721;</span></div>
+        <h3>5-Day Forecast</h3>
+        <div id="forecastButtons"></div>
+        <div id="forecastData"></div>
+      </div>
+      <div id="favoritesContainer"></div>
+    </div>
+
+    <script src="scripts/autocomplete.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/favorites.js"></script>
+  </body>
+</html>
